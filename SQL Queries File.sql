@@ -115,7 +115,7 @@ ORDER BY product_count DESC;
 
 WITH product_counts AS (
     SELECT fiscal_year,	
-						count(distinct product_code) as unique_products
+	   count(distinct product_code) as unique_products
 		FROM fact_sales_monthly
         group by fiscal_year
 )
@@ -231,7 +231,7 @@ SELECT
 	JOIN dim_customer d
 	ON f.customer_code = d.customer_code
 	WHERE pre_invoice_discount_pct > 
-									(SELECT AVG(pre_invoice_discount_pct) 
+				    (SELECT AVG(pre_invoice_discount_pct) 
                                     FROM fact_pre_invoice_deductions 
                                     WHERE fiscal_year = 2021) 
 	AND fiscal_year = 2021 AND market = 'India'
