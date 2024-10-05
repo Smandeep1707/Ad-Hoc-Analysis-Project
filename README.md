@@ -40,4 +40,4 @@ The analysis utilizes the following datasets:
 
 ### Repository Structure
 - SQL Queries: Contains all SQL scripts used for data analysis.
-- Presentation: The PowerPoint presentation summarizing key insights.
+- Presentation PDF : The presentation PDF summarizing key insights.
